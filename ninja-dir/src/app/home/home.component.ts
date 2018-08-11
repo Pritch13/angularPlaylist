@@ -14,4 +14,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
+  alertMe(test){
+    alert(test);
+  }
 }
