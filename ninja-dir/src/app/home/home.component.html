@@ -14,5 +14,9 @@
       <h1 class="center-align">{{ homeTitle }}</h1>
     </div>
   </div>
-  <a class="waves-effect waves-light btn" (click)="alertMe('Didthiswork?')">Click me!</a>
+  <div class="row">
+    <div class="col l12">
+      <button (click)="fireYellEvent($event)">Hit me</button>
+    </div>
+  </div>
 </div>
