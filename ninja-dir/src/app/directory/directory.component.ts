@@ -11,22 +11,26 @@ export class DirectoryComponent implements OnInit {
   products = [{
     name: "Books",
     stock: 200,
-    price: 10
+    price: 10,
+    creator: "Sam P"
   },
   {
     name: "Candle",
     stock: 50,
-    price: 3
+    price: 3,
+    creator: "Emma C"
   },
   {
     name: "Hat",
     stock: 3,
-    price: 15
+    price: 15,
+    creator: "Mike L"
   },
   {
     name: "Laptop",
     stock: 12,
-    price: 90
+    price: 90,
+    creator: "Jake R"
   },
   
   
