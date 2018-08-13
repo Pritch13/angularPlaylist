@@ -5,8 +5,14 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class FilterPipe implements PipeTransform {
 
-  transform(value: any, args?: any): any {
-    return null;
+  transform(products: any, term: any): any {
+    //check if undefined
+    if(term === undefined) return products;
+
+    return products.filter(function(product){
+      return product.name.toLowerCase().includes(term.toLowerCase());
+    })
+
   }
 
 }

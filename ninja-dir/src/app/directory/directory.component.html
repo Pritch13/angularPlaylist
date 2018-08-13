@@ -16,7 +16,7 @@
     </thead>
 
     <tbody>
-      <tr *ngFor="let product of products">
+      <tr *ngFor="let product of products | filter:term">
         <td>{{product.name}}</td>
         <td>{{product.stock}}</td>
         <td>${{product.price}}</td>
