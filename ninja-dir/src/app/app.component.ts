@@ -7,12 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  ninja = {
-    name: 'Ryu',
-    belt: 'Red'
-  }
 
-  yell(e) {
-    alert('Yelling happening!');
-  }
 }
