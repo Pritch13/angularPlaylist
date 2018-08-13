@@ -17,7 +17,19 @@ export class DirectoryComponent implements OnInit {
     name: "Candle",
     stock: 50,
     price: 3
-  }
+  },
+  {
+    name: "Candle",
+    stock: 50,
+    price: 3
+  },
+  {
+    name: "Candle",
+    stock: 50,
+    price: 3
+  },
+  
+  
 ];
 
 
