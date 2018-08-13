@@ -19,14 +19,14 @@ export class DirectoryComponent implements OnInit {
     price: 3
   },
   {
-    name: "Candle",
-    stock: 50,
-    price: 3
+    name: "Hat",
+    stock: 3,
+    price: 15
   },
   {
-    name: "Candle",
-    stock: 50,
-    price: 3
+    name: "Laptop",
+    stock: 12,
+    price: 90
   },
   
   
