@@ -1,50 +1,31 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { FilterPipe } from '../filter.pipe';
+import { LoggingService } from '../logging.service';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-directory',
   templateUrl: './directory.component.html',
-  styleUrls: ['./directory.component.css']
+  styleUrls: ['./directory.component.css'],
+  providers: [DataService, LoggingService]
 })
 export class DirectoryComponent implements OnInit {
 
-  products = [{
-    name: "Books",
-    stock: 200,
-    price: 10,
-    creator: "Sam P"
-  },
-  {
-    name: "Candle",
-    stock: 50,
-    price: 3,
-    creator: "Emma C"
-  },
-  {
-    name: "Hat",
-    stock: 3,
-    price: 15,
-    creator: "Mike L"
-  },
-  {
-    name: "Laptop",
-    stock: 12,
-    price: 90,
-    creator: "Jake R"
-  },
-  
-  
-];
+  products = [];
 
+  constructor(private logger: LoggingService, private dataService: DataService) { }
 
-
-
-
-  constructor() { 
-   }
+  testLog() {
+    this.logger.log();
+  }
 
   ngOnInit() {
+    this.dataService.fetchData().subscribe(
+      (data) => this.products = data
+    );
+    
   }
+  
 
 }
