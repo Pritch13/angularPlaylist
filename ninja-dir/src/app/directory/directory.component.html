@@ -28,10 +28,10 @@
   <h2 class="center-align">Add a new product</h2>
  
   <form id="add-product">
-    <input type="text" [(ngModel)]="name" placeholder="Name of product" name="name" />
-    <input type="number" [(ngModel)]="stock" placeholder="Quantity of product" name="stock" />
-    <input type="number" [(ngModel)]="price" placeholder="Price of product" name="price"/>
-    <input type="text" [(ngModel)]="creator" placeholder="Entry created by" name="creator"/>
+    <input type="text" [(ngModel)]="name" [value]="name" placeholder="Name of product" name="name" />
+    <input type="number" [(ngModel)]="stock" [value]="stock" placeholder="Quantity of product" name="stock" />
+    <input type="number" [(ngModel)]="price" [value]="price" placeholder="Price of product" name="price"/>
+    <input type="text" [(ngModel)]="creator" [value]="creator" placeholder="Entry created by" name="creator"/>
     <a class="waves-effect waves-light btn" (click)="fbPostData(name, stock, price, creator)">Add</a>
   </form>
   

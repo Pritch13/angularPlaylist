@@ -12,6 +12,10 @@ declare var firebase: any;
   providers: [DataService, LoggingService]
 })
 export class DirectoryComponent implements OnInit {
+  name:string = '' ;
+  stock:string = '';
+  price:string = '';
+  creator:string = '';
 
   products = [];
 
@@ -22,9 +26,6 @@ export class DirectoryComponent implements OnInit {
   }
 
   ngOnInit() {
-   /* this.dataService.fetchData().subscribe(
-      (data) => this.products = data
-    );*/
     this.fbGetData();
   }
 
@@ -35,9 +36,16 @@ export class DirectoryComponent implements OnInit {
     })
   }
 
+  clearSearch() {
+    this.name = null;
+    this.stock = null;
+    this.price = null;
+    this.creator = null;
+  }
+
   fbPostData(name, stock, price, creator) {
     firebase.database().ref('/').push({name:name, stock:stock, price:price, creator:creator});
-    name.val("");
+    this.clearSearch();
   }
   
 
