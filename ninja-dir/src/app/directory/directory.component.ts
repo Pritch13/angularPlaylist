@@ -31,11 +31,13 @@ export class DirectoryComponent implements OnInit {
   fbGetData() {
     firebase.database().ref('/').on('child_added', (snapshot)=> {
       console.log(snapshot.val());
-      
       this.products.push(snapshot.val())
-      
     })
+  }
 
+  fbPostData(name, stock, price, creator) {
+    firebase.database().ref('/').push({name:name, stock:stock, price:price, creator:creator});
+    name.val("");
   }
   
 
